@@ -1,0 +1,93 @@
+<!--
+The MIT License (MIT)
+Copyright (c) 2016 Nicholas Hutchind, Donaldson Chickeme
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+https://opensource.org/licenses/MIT
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+		xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		id="me.donaldepignosis.cordova.plugins.streamingmedia.mod"
+		version="1.0.5">
+
+	<name>StreamingMedia</name>
+
+	<description>
+		This plugin allows you to launch a streaming player for audio or video in either split screen mode or fullscreen mode. Works for only Android.
+	</description>
+
+	<author>Nicholas Hutchind, Donaldson Chickeme</author>
+
+	<license>MIT</license>
+
+	<keywords>Streaming, Media, Video, Audio, Android, iOS</keywords>
+
+	<repo>https://github.com/donaldepignosis/cordova-plugin-streaming-media.git</repo>
+
+	<issue>https://github.com/donaldepignosis/cordova-plugin-streaming-media/issues</issue>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+
+	<js-module src="www/StreamingMedia.js" name="StreamingMedia">
+		<clobbers target="streamingMedia" />
+	</js-module>
+
+	<!-- ios -->
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="StreamingMedia">
+				<param name="ios-package" value="StreamingMedia" />
+			</feature>
+		</config-file>
+		<header-file src="src/ios/StreamingMedia.h" />
+		<source-file src="src/ios/StreamingMedia.m" />
+		<framework src="MediaPlayer.framework" />
+	</platform>
+
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="StreamingMedia">
+				<param name="android-package" value="me.donaldepignosis.cordova.plugins.streamingmedia.mod.StreamingMedia" />
+			</feature>
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.INTERNET" />
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity android:configChanges="orientation|screenSize" android:name="me.donaldepignosis.cordova.plugins.streamingmedia.mod.SimpleAudioStream" android:label="Simple Audio Stream"></activity>
+			<activity android:configChanges="orientation|screenSize" android:name="me.donaldepignosis.cordova.plugins.streamingmedia.mod.SimpleVideoStream" android:label="Simple Video Stream"></activity>
+		</config-file>
+		<source-file src="src/android/me/donaldepignosis/cordova/plugins/streamingmedia/mod/SimpleAudioStream.java" target-dir="src/me/donaldepignosis/cordova/plugins/streamingmedia/mod" />
+		<source-file src="src/android/me/donaldepignosis/cordova/plugins/streamingmedia/mod/SimpleVideoStream.java" target-dir="src/me/donaldepignosis/cordova/plugins/streamingmedia/mod" />
+		<source-file src="src/android/me/donaldepignosis/cordova/plugins/streamingmedia/mod/StreamingMedia.java" target-dir="src/me/donaldepignosis/cordova/plugins/streamingmedia/mod" />
+		<source-file src="src/android/me/donaldepignosis/cordova/plugins/streamingmedia/mod/ImageLoadTask.java" target-dir="src/me/donaldepignosis/cordova/plugins/streamingmedia/mod" />
+	</platform>
+
+	<platform name="amazon-fireos">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="StreamingMedia">
+				<param name="android-package" value="me.donaldepignosis.cordova.plugins.streamingmedia.mod.StreamingMedia" />
+			</feature>
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.INTERNET" />
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity android:configChanges="orientation|screenSize" android:name="me.donaldepignosis.cordova.plugins.streamingmedia.mod.SimpleAudioStream" android:label="Simple Audio Stream"></activity>
+			<activity android:configChanges="orientation|screenSize" android:name="me.donaldepignosis.cordova.plugins.streamingmedia.mod.SimpleVideoStream" android:label="Simple Video Stream"></activity>
+		</config-file>
+		<source-file src="src/android/me/donaldepignosis/cordova/plugins/streamingmedia/mod/SimpleAudioStream.java" target-dir="src/me/donaldepignosis/cordova/plugins/streamingmedia/mod" />
+		<source-file src="src/android/me/donaldepignosis/cordova/plugins/streamingmedia/mod/SimpleVideoStream.java" target-dir="src/me/donaldepignosis/cordova/plugins/streamingmedia/mod" />
+		<source-file src="src/android/me/donaldepignosis/cordova/plugins/streamingmedia/mod/StreamingMedia.java" target-dir="src/me/donaldepignosis/cordova/plugins/streamingmedia/mod" />
+		<source-file src="src/android/me/donaldepignosis/cordova/plugins/streamingmedia/mod/ImageLoadTask.java" target-dir="src/me/donaldepignosis/cordova/plugins/streamingmedia/mod" />
+	</platform>
+</plugin>

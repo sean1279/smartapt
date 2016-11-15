@@ -1,0 +1,171 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'ios-deploy' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose install initial load of C:\Users\shuberty\AppData\Roaming\npm\package.json
+5 verbose readDependencies loading dependencies from C:\Users\shuberty\AppData\Roaming\npm\package.json
+6 silly cache add args [ 'ios-deploy', null ]
+7 verbose cache add spec ios-deploy
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'ios-deploy',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'ios-deploy',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed ios-deploy@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for ios-deploy
+11 info addNameTag [ 'ios-deploy', 'latest' ]
+12 silly mapToRegistry name ios-deploy
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'ios-deploy',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'ios-deploy',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/ios-deploy
+17 verbose addNameTag registry:https://registry.npmjs.org/ios-deploy not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/ios-deploy
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 8:34:47 AM
+21 verbose request id 52e9c3218acf1b35
+22 http request GET https://registry.npmjs.org/ios-deploy
+23 http 200 https://registry.npmjs.org/ios-deploy
+24 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 verbose headers   etag: '"5ALDUQ1GLDBEYMDJK8RUMV18V"',
+24 verbose headers   'content-type': 'application/json',
+24 verbose headers   'content-encoding': 'gzip',
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   'content-length': '6873',
+24 verbose headers   'accept-ranges': 'bytes',
+24 verbose headers   date: 'Tue, 19 Jul 2016 12:34:47 GMT',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   age: '0',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-served-by': 'cache-ord1748-ORD',
+24 verbose headers   'x-cache': 'MISS',
+24 verbose headers   'x-cache-hits': '0',
+24 verbose headers   'x-timer': 'S1468931687.764369,VS0,VE99',
+24 verbose headers   vary: 'Accept-Encoding' }
+25 silly get cb [ 200,
+25 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 silly get     etag: '"5ALDUQ1GLDBEYMDJK8RUMV18V"',
+25 silly get     'content-type': 'application/json',
+25 silly get     'content-encoding': 'gzip',
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     'content-length': '6873',
+25 silly get     'accept-ranges': 'bytes',
+25 silly get     date: 'Tue, 19 Jul 2016 12:34:47 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     age: '0',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-ord1748-ORD',
+25 silly get     'x-cache': 'MISS',
+25 silly get     'x-cache-hits': '0',
+25 silly get     'x-timer': 'S1468931687.764369,VS0,VE99',
+25 silly get     vary: 'Accept-Encoding' } ]
+26 verbose get saving ios-deploy to C:\Users\shuberty\AppData\Roaming\npm-cache\registry.npmjs.org\ios-deploy\.cache.json
+27 verbose correctMkdir C:\Users\shuberty\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+28 silly addNameTag next cb for ios-deploy with tag latest
+29 silly addNamed ios-deploy@1.8.6
+30 verbose addNamed "1.8.6" is a plain semver version for ios-deploy
+31 silly mapToRegistry name ios-deploy
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry data Result {
+34 silly mapToRegistry   raw: 'ios-deploy',
+34 silly mapToRegistry   scope: null,
+34 silly mapToRegistry   name: 'ios-deploy',
+34 silly mapToRegistry   rawSpec: '',
+34 silly mapToRegistry   spec: 'latest',
+34 silly mapToRegistry   type: 'tag' }
+35 silly mapToRegistry uri https://registry.npmjs.org/ios-deploy
+36 verbose addRemoteTarball https://registry.npmjs.org/ios-deploy/-/ios-deploy-1.8.6.tgz not in flight; adding
+37 verbose addRemoteTarball [ 'https://registry.npmjs.org/ios-deploy/-/ios-deploy-1.8.6.tgz',
+37 verbose addRemoteTarball   'abb0b5132e7e6c89d1f521ba7c81c44eec54d4f5' ]
+38 info retry fetch attempt 1 at 8:34:47 AM
+39 info attempt registry request try #1 at 8:34:47 AM
+40 http fetch GET https://registry.npmjs.org/ios-deploy/-/ios-deploy-1.8.6.tgz
+41 http fetch 200 https://registry.npmjs.org/ios-deploy/-/ios-deploy-1.8.6.tgz
+42 silly fetchAndShaCheck shasum abb0b5132e7e6c89d1f521ba7c81c44eec54d4f5
+43 verbose addTmpTarball C:\Users\shuberty\AppData\Local\Temp\npm-3712-b7b5a6fe\registry.npmjs.org\ios-deploy\-\ios-deploy-1.8.6.tgz not in flight; adding
+44 verbose addTmpTarball already have metadata; skipping unpack for ios-deploy@1.8.6
+45 verbose correctMkdir C:\Users\shuberty\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+46 silly cache afterAdd ios-deploy@1.8.6
+47 verbose afterAdd C:\Users\shuberty\AppData\Roaming\npm-cache\ios-deploy\1.8.6\package\package.json not in flight; writing
+48 verbose correctMkdir C:\Users\shuberty\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+49 verbose afterAdd C:\Users\shuberty\AppData\Roaming\npm-cache\ios-deploy\1.8.6\package\package.json written
+50 silly install resolved [ { name: 'ios-deploy',
+50 silly install resolved     version: '1.8.6',
+50 silly install resolved     os: [ 'darwin' ],
+50 silly install resolved     description: 'launch iOS apps iOS devices from the command line (Xcode 7)',
+50 silly install resolved     main: 'ios-deploy',
+50 silly install resolved     scripts:
+50 silly install resolved      { preinstall: './src/scripts/check_reqs.js && xcodebuild',
+50 silly install resolved        test: 'npm run pycompile && npm run jshint && xcodebuild -target ios-deploy-lib && xcodebuild test -scheme ios-deploy-tests',
+50 silly install resolved        jshint: 'node node_modules/jshint/bin/jshint src/scripts/*.js',
+50 silly install resolved        pycompile: 'python -m py_compile src/scripts/*.py' },
+50 silly install resolved     bin: { 'ios-deploy': './build/Release/ios-deploy' },
+50 silly install resolved     repository:
+50 silly install resolved      { type: 'git',
+50 silly install resolved        url: 'git+https://github.com/phonegap/ios-deploy.git' },
+50 silly install resolved     devDependencies: { jshint: '2.5.8' },
+50 silly install resolved     keywords: [ 'ios-deploy', 'deploy to iOS device' ],
+50 silly install resolved     bugs: { url: 'https://github.com/phonegap/ios-deploy/issues' },
+50 silly install resolved     author: { name: 'Greg Hughes' },
+50 silly install resolved     license: 'GPLv3',
+50 silly install resolved     gitHead: 'd7cccae1ade60378ce1134f496b68eeac53eb860',
+50 silly install resolved     homepage: 'https://github.com/phonegap/ios-deploy#readme',
+50 silly install resolved     _id: 'ios-deploy@1.8.6',
+50 silly install resolved     _shasum: 'abb0b5132e7e6c89d1f521ba7c81c44eec54d4f5',
+50 silly install resolved     _from: 'ios-deploy@latest',
+50 silly install resolved     _npmVersion: '2.14.7',
+50 silly install resolved     _nodeVersion: '4.2.2',
+50 silly install resolved     _npmUser: { name: 'shazron', email: 'shazron@gmail.com' },
+50 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+50 silly install resolved     dist:
+50 silly install resolved      { shasum: 'abb0b5132e7e6c89d1f521ba7c81c44eec54d4f5',
+50 silly install resolved        tarball: 'https://registry.npmjs.org/ios-deploy/-/ios-deploy-1.8.6.tgz' },
+50 silly install resolved     _npmOperationalInternal:
+50 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+50 silly install resolved        tmp: 'tmp/ios-deploy-1.8.6.tgz_1460409336359_0.34613347332924604' },
+50 silly install resolved     directories: {},
+50 silly install resolved     _resolved: 'https://registry.npmjs.org/ios-deploy/-/ios-deploy-1.8.6.tgz' } ]
+51 info install ios-deploy@1.8.6 into C:\Users\shuberty\AppData\Roaming\npm
+52 info installOne ios-deploy@1.8.6
+53 verbose installOne of ios-deploy to C:\Users\shuberty\AppData\Roaming\npm not in flight; installing
+54 verbose correctMkdir C:\Users\shuberty\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+55 verbose lock using C:\Users\shuberty\AppData\Roaming\npm-cache\_locks\ios-deploy-6f564bcd203b634c.lock for C:\Users\shuberty\AppData\Roaming\npm\node_modules\ios-deploy
+56 verbose unlock done using C:\Users\shuberty\AppData\Roaming\npm-cache\_locks\ios-deploy-6f564bcd203b634c.lock for C:\Users\shuberty\AppData\Roaming\npm\node_modules\ios-deploy
+57 verbose stack Error: Unsupported
+57 verbose stack     at checkPlatform (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-install-checks\index.js:47:14)
+57 verbose stack     at Array.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+57 verbose stack     at LOOP (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:15:14)
+57 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:18:7
+57 verbose stack     at checkEngine (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-install-checks\index.js:11:20)
+57 verbose stack     at Array.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+57 verbose stack     at LOOP (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:15:14)
+57 verbose stack     at chain (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:20:5)
+57 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install.js:1038:5
+57 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\utils\locker.js:39:7
+58 verbose pkgid ios-deploy@1.8.6
+59 verbose cwd C:\Users\shuberty\Desktop\PhoneGap\Appetize\www
+60 error Windows_NT 6.1.7601
+61 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "ios-deploy"
+62 error node v4.4.7
+63 error npm  v2.15.8
+64 error code EBADPLATFORM
+65 error notsup Unsupported
+65 error notsup Not compatible with your operating system or architecture: ios-deploy@1.8.6
+65 error notsup Valid OS:    darwin
+65 error notsup Valid Arch:  any
+65 error notsup Actual OS:   win32
+65 error notsup Actual Arch: ia32
+66 verbose exit [ 1, true ]

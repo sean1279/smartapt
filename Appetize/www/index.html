@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="theme-color" content="#2196f3">
+<title>Spartan Net</title>
+<!-- Font embedding link goes here -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Suez+One" rel="stylesheet">
+
+<!-- CSS link goes here -->
+<link rel="stylesheet" href="css/framework7.material.min.css">
+<link rel="stylesheet" href="css/framework7.material.colors.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/swipebox.min.css">
+<link rel="stylesheet" href="css/maxframes.css">
+<!--
+<script> 
+    $.ajax({
+    url:"http://smartapartment.spartan-net.com/auth/index2.php",
+    dataType: "jsonp",
+    success:function(data,status){
+    if(status=='success')
+    {
+    alert("Data: " + data.fullname + "\nStatus: " + status);
+    var val = data.fullname;
+    $("#imchanged").html(val);
+    }
+    }
+    }); 
+    </script>
+
+-->
+
+
+
+</head>
+<body class="theme-black gradient">
+
+<!--
+    <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+    <button id="imchanged">Get External Content</button>
+
+-->
+
+<div class="statusbar-overlay"></div>
+<div class="panel-overlay"></div>
+<div class="panel panel-left panel-reveal sidebar">
+  <div class="view">
+    <div class=" ">
+      <div data-page="panel-left" class="sidemenu leftmenusmall ">
+        <div class="item-content userprofile">
+                <div class="item-media"><img src="img/pic1.png" width="44"/></div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Max Smith</div>
+                  </div>
+                  <div class="item-subtitle">Arena Place</div>
+                </div>
+        </div> 
+        <div class="page-content">
+            <div class="list-block accordion-list">
+              <ul class="menu">
+               <!--<li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner"> 
+                      <div class="item-title"><i class="fa fa-tasks"></i>Menu</div> 
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                           <li><a href="#" data-panel="left" class="item-link  close-panel"><span>This is overlay</span></a></li>
+                            <li><a href="#" data-panel="right" class="item-link open-panel"><span>Reveal Sidemenu</span></a></li>
+                            <li><a href="todo.html" class="item-link close-panel"><span>Floating Speed Dial</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li> 
+				-->
+                   <li><a href="profile3.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-home"></i><span>Max's Home</span></div></a></li>
+                  
+                <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-list-alt"></i>Room Settings</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="locks.html" class="item-link close-panel"><span>Door Locks</span></a></li>
+                            <li><a href="living.html" class="item-link close-panel"><span>Living room</span></a></li>                            
+                            <li><a href="kitchen.html" class="item-link close-panel"><span>Kitchen</span></a></li>
+                            <li><a href="bathroom.html" class="item-link close-panel"><span>Bathroom</span></a></li>
+                            <li><a href="bedroom.html" class="item-link close-panel"><span>Bedroom</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                <!--<li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-heart"></i>About</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="about.html" class="item-link close-panel"><span>About</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+				
+				-->
+                <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-briefcase"></i>Services</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                         <ul>
+                            <li><a href="dry.html" class="item-link close-panel"><span>Dry Cleaning</span></a></li>
+                            <li><a href="dog.html" class="item-link close-panel"><span>Dog Walking</span></a></li>
+                            <li><a href="groc.html" class="item-link close-panel"><span>Grocery Delivery</span></a></li>
+                            <li><a href="clean.html" class="item-link close-panel"><span>House Cleaning</span></a></li>
+                            <li><a href="autofix.html" class="item-link close-panel"><span>Auto Repair</span></a></li>
+							<li><a href="smartadd.html" class="item-link close-panel"><span>Smart Services</span></a></li>
+							<li><a href="aptfind.html" class="item-link close-panel"><span>Apartment Finder</span></a></li>
+                       
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                <!--<li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-group"></i>Team</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="team.html" class="item-link close-panel"><span>Team</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                  -->
+                  <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-user"></i>My Account</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="profile1.html" class="item-link close-panel"><span>Pay bill</span></a></li>
+                            <li><a href="profile2.html" class="item-link close-panel"><span>Add subscription</span></a></li>
+                            <li><a href="profile3.html" class="item-link close-panel"><span>View Usage</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                  
+                 <!-- <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-picture-o"></i>Gallery</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="gallery.html" class="item-link close-panel"><span>Gallery 1</span></a></li>
+                            <li><a href="gallery2.html" class="item-link close-panel"><span>Gallery 2</span></a></li>
+                            <li><a href="gallery3.html" class="item-link close-panel"><span>Gallery 3</span></a></li>
+                            <li><a href="gallery4.html" class="item-link close-panel"><span>Masonary 1</span></a></li>
+                            <li><a href="gallery5.html" class="item-link close-panel"><span>Masonary 2</span></a></li>
+                            <li><a href="gallery6.html" class="item-link close-panel"><span>Masonary 3</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+				
+                 <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-life-ring"></i>Blog</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="blog.html" class="item-link close-panel"><span>Blog</span></a></li>
+                            <li><a href="blogDetail.html" class="item-link close-panel"><span>Blog Details</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-lock"></i>Login/Register</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="login-screen.html" class="item-link close-panel"><span>Login/Register</span></a></li>
+                            <li><a href="sign-in.html" class="item-link close-panel"><span>Login</span></a></li>
+                            <li><a href="register.html" class="item-link close-panel"><span>Register</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                  -->
+                <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-check"></i>Scene Manager</div>
+                  <!--  </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="todo.html" class="item-link close-panel"><span>Todo</span></a></li>
+                            <li><a href="todoadd.html" class="item-link close-panel"><span>Todo Add</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+				-->
+                <!--<li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-cart-plus"></i>Shopping</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="shoping_category.html" class="item-link close-panel"><span>shooping</span></a></li>
+                            <li><a href="productlist.html" class="item-link close-panel"><span>products</span></a></li>
+                            <li><a href="product_details.html" class="item-link close-panel"><span></span></a></li>
+                            <li><a href="cart.html" class="item-link close-panel"><span>Cart</span></a></li>
+                            <li><a href="payment.html" class="item-link close-panel"><span>Payment Method</span></a></li>
+                            <li><a href="thankyou.html" class="item-link close-panel"><span>Thank you</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+				
+				-->
+                <!--<li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-film"></i>Sliders</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="swiper.html" class="item-link close-panel item-content"><span>Sliders</span></a></li>
+                            <li><a href="swiper-horizontal.html" class="item-link  close-panel  item-content"><span>Swiper Horizontal</span></a></li>
+                            <li><a href="swiper-vertical.html" class="item-link  close-panel  item-content"><span>Swiper Vertical</span></a></li>
+                            <li><a href="swiper-space-between.html" class="item-link  close-panel  item-content"><span>Space Between Slides</span></a></li>
+                            <li><a href="swiper-multiple.html" class="item-link  close-panel  item-content"><span>Multiple Per Page</span></a></li>
+                            <li><a href="swiper-nested.html" class="item-link  close-panel  item-content"><span>Nested Swipers</span></a></li>
+                            <li><a href="swiper-loop.html" class="item-link  close-panel  item-content"><span>Infinite Loop Mode</span></a></li>
+                            <li><a href="swiper-3d-cube.html" class="item-link  close-panel  item-content"><span>3D Cube Effect</span></a></li>
+                            <li><a href="swiper-3d-coverflow.html" class="item-link  close-panel  item-content"><span>3D Coverflow Effect</span></a></li>
+                            <li><a href="swiper-3d-flip.html" class="item-link  close-panel  item-content">3<span>D Flip Effect</span></a></li>
+                            <li><a href="swiper-fade.html" class="item-link  close-panel  item-content"><span>Fade Effect</span></a></li>
+                            <li><a href="swiper-scrollbar.html" class="item-link  close-panel  item-content"><span>With Scrollbar</span></a></li>
+                            <li><a href="swiper-custom.html" class="item-link   close-panel item-content"><span>Custom Controls</span></a></li>
+                            <li><a href="swiper-parallax.html" class="item-link  close-panel  item-content"><span>Parallax</span></a></li>
+                            <li><a href="swiper-pagination-progress.html" class="item-link   close-panel item-content"><span>Progress Pagination</span></a></li>
+                            <li><a href="swiper-pagination-fraction.html" class="item-link  close-panel  item-content"><span>Fraction Pagination</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                  </li>
+				  -->
+                  <!--<li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-star"></i>Features</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                          <li><a href="fonticons.html" class="item-link close-panel item-content item-link"><div class="itemmeniinner"><span>Icons</span></div></a></li>
+                          <li><a href="button.html" class="item-link close-panel item-content item-link"><div class="itemmeniinner"><span>Button</span></div></a></li>
+                          <li><a href="calendar.html" class="item-link close-panel item-content item-link"><div class="itemmeniinner"><span>Calendar</span></div></a></li>
+                          <li><a href="picker.html" class="item-link close-panel item-content item-link"><div class="itemmeniinner"><span>Picker</span></div></a></li>
+                          <li><a href="accordion.html" class="item-link close-panel item-content item-link"><div class="itemmeniinner"><span>Accordian</span></div></a></li>
+                          <li><a href="swipe-delete.html" class="item-link close-panel item-content item-link"><div class="itemmeniinner"><span>Swipe</span></div></a></li>
+                          <li><a href="typography.html" class="item-link close-panel item-content item-link"><div class="itemmeniinner"><span>Typography</span></div></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+				-->
+                 <!-- <li><a href="chart.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-bar-chart"></i><span>Chart (Google)</span></div></a></li> 
+                  <li><a href="map.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-map"></i><span>Map</span></div></a></li> -->
+                  <li><a href="color-themes.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-th"></i><span>Themes</span></div></a></li>  
+<!--                
+				<li><a href="contacts.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-user"></i><span>Contact List</span></div></a></li> -->
+				  <li><a href="messages.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-comment-o"></i><span>Messages</span></div></a></li>
+                 <li><a href="swiper.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-envelope"></i><span>Mail</span></div></a></li>
+                  <li><a href="forms-buttons.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-music"></i><span>Bluetooth Speakers</span></div></a></li>
+                  <li><a href="home_dashboard.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-clock-o"></i><span>Master Control Room</span></div></a></li> 
+                 <!-- <li><a href="404.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-exclamation-triangle"></i><span>404</span></div></a></li> -->
+				
+                  <li><a href="contactus.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-paper-plane"></i><span>Contact Us</span></div></a></li>
+                  
+              </ul>
+           
+			 </div>
+          
+        </div>
+         <div class="buttonbar row no-gutter">
+                <a href="sign-in.html" class=" button color2 col-100">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+         
+<div class="panel panel-right panel-cover sidebar">
+  <div class="view">
+    <div class=" ">
+      <div data-page="panel-left" class="sidemenu leftmenusmall ">
+        <div class="item-content userprofile">
+                <div class="item-media"><img src="img/pic1.png" width="44"  alt=""/></div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Max Smith</div>
+                  </div>
+                  <div class="item-subtitle">Arena Place</div>
+                </div>
+        </div> 
+        <div class="page-content">
+            <div class="inputs-list content-block" >
+                  <h2 class="maintitle  center">Contact us</h2>
+                    <p class="center" ></p>
+              </div>
+              <div class="list-block inputs-list">
+                  <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title">Your name</div>
+                        <div class="item-input item-input-field">
+                          <input type="text" placeholder=""/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title">E-mail</div>
+                        <div class="item-input item-input-field">
+                          <input type="email" placeholder=""/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title ">Phone</div>
+                        <div class="item-input item-input-field">
+                          <input type="tel" placeholder=""/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="align-top">
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title">Message/Queries</div>
+                        <div class="item-input item-input-field">
+                          <textarea class="resizable"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                </div>
+              <div class="content-block"> <a href="home.html" class="button button-fill ">Get in touch</a> </div>
+               <hr>
+            <div class="center content-block ">
+              <div class=""><img src="img/phone.png" alt=""></div>
+              <h2 class=""> 555 123 4567 </h2>
+              <p class=""> Call Us </p>
+            </div>
+            <hr>
+            <div class="content-block">
+            <h2 class="center">Connect with us</h2>
+            <p class="center"></p>
+            <ul class="socials">
+                <li><a href="" class="fb"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="" class="tw"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="" class="gp"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="" class="pin"><i class="fa fa-pinterest"></i></a></li>
+            </ul>
+            </div>
+         
+        </div>
+         <div class="buttonbar row no-gutter">
+                <a href="contactus.html" class=" button button-fill col-100 close-panel">Locate Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+    
+<div class="views pageview" >
+  <div class="view view-main">
+    <div class="pages">
+      <div data-page="index" class="page">
+        <div class="page-content landingpage gradient">
+          <div class="logo main col12"> <img src="img/icon.png" alt=""> </div>
+            <div class="introtext">
+                <h1> Welcome to<br>Spartan Net</h1>
+                <p>Zen Smart</p>
+            </div>
+            <div class="buttonbar  no-gutter">
+                <a href="sign-in.html" class="button-fill button color-indigo col">Sign in</a>
+                <a href="register.html" class="color2 button col">Sign Up</a>
+            </div>
+           
+        </div>
+      </div>
+    </div> 
+  </div>
+</div> 
+
+ 
+<!-- JS link goes here --> 
+
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/framework7.min.js"></script> 
+<script type="text/javascript" src="js/jquery.swipebox.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="js/masonry.pkgd.min.js"></script> 
+<script type="text/javascript" src="js/maxframes.js"></script>
+
+	 	<script> 
+function myFunction() { 
+
+	var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://graph.api.smartthings.com/api/smartapps/installations/64b8f0b2-8c2f-45c2-a5f6-511c578a581d/switches/1d975bd6-587e-4f92-8566-f881862b55af/toggle?access_token=693cb233-759e-4fd6-9cfd-7157a0e5493e", false);
+xhr.send();
+
+console.log(xhr.status);
+console.log(xhr.statusText);
+	//function onOff(this);
+}
+</script> 
+	 	<script> 
+function lock() { 
+
+	var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://graph.api.smartthings.com/api/smartapps/installations/64b8f0b2-8c2f-45c2-a5f6-511c578a581d/locks/58fa6e9e-012b-473c-82f1-0b3de88b9bae/lock?access_token=693cb233-759e-4fd6-9cfd-7157a0e5493e", false);
+xhr.send();
+
+console.log(xhr.status);
+console.log(xhr.statusText);
+	//function onOff(this);
+}
+</script> 
+
+	 	<script> 
+function unlock() { 
+
+	var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://graph.api.smartthings.com/api/smartapps/installations/64b8f0b2-8c2f-45c2-a5f6-511c578a581d/locks/58fa6e9e-012b-473c-82f1-0b3de88b9bae/unlock?access_token=693cb233-759e-4fd6-9cfd-7157a0e5493e", false);
+xhr.send();
+
+console.log(xhr.status);
+console.log(xhr.statusText);
+	//function onOff(this);
+}
+</script>
+
+	 	<script> 
+function bulb() { 
+
+	var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://graph.api.smartthings.com/api/smartapps/installations/64b8f0b2-8c2f-45c2-a5f6-511c578a581d/switches/8f6105ef-1f69-42fb-81c0-b1cc902f74cd/toggle?access_token=693cb233-759e-4fd6-9cfd-7157a0e5493e", false);
+xhr.send();
+
+console.log(xhr.status);
+console.log(xhr.statusText);
+	//function onOff(this);
+}
+</script>
+
+	 	<script> 
+function dimmer() { 
+
+	var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://graph.api.smartthings.com/api/smartapps/installations/64b8f0b2-8c2f-45c2-a5f6-511c578a581d/switches/b15dcf30-01f7-4a38-9ccb-7045d229d2b0/toggle?access_token=693cb233-759e-4fd6-9cfd-7157a0e5493e", false);
+xhr.send();
+
+console.log(xhr.status);
+console.log(xhr.statusText);
+	//function onOff(this);
+}
+</script>
+
+	 	<script> 
+function outlet() { 
+
+	var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://graph.api.smartthings.com/api/smartapps/installations/64b8f0b2-8c2f-45c2-a5f6-511c578a581d/switches/29bd36f0-e3fc-4e15-bc9f-72c499dfbf6b/toggle?access_token=693cb233-759e-4fd6-9cfd-7157a0e5493e", false);
+xhr.send();
+
+console.log(xhr.status);
+console.log(xhr.statusText);
+	//function onOff(this);
+}
+</script>
+
+</body>
+</html>

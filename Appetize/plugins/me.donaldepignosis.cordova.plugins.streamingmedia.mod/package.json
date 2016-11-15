@@ -1,0 +1,27 @@
+{
+  "name": "cordova-plugin-streaming-media-mod",
+  "version": "1.0.5",
+  "description": "This plugin allows you to launch a streaming player for audio or video in either split screen mode or fullscreen mode. Works for only Android.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donaldepignosis/cordova-plugin-streaming-media.git"
+  },
+  "keywords": [
+    "media",
+    "streaming",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "cordova-fireos"
+  ],
+  "author": "Donaldson Epignosis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/donaldepignosis/cordova-plugin-streaming-media/issues"
+  },
+  "homepage": "https://github.com/donaldepignosis/cordova-plugin-streaming-media#readme"
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+   <link rel="stylesheet" type="text/css" href="css/index.css" />
+   
+   <!--Themeroller test below -->
+   <!-- <link rel="stylesheet" href="themes/testTheme.min.css" /> -->
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+    <title>SmartApt</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- <script src="jquery-1.12.4.min.js"></script> -->
+</head>
+
+<body>
+
+    <div class="app">
+        <h1>Spartys</h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device Ready</p>
+        </div>
+		 <p>
+          <button type = "button">
+            standard button
+          </button>
+           
+          <input type = "button"
+                 value = "input button" />
+          <input type = "reset" />
+          <input type = "submit" />
+		  
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+
+
+
+<!-- theme roller stuff -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+
+
+<script> 
+function myFunction() { 
+    document.getElementById("demo").innerHTML = "button works";
+	var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://graph.api.smartthings.com/api/smartapps/installations/64b8f0b2-8c2f-45c2-a5f6-511c578a581d/switches/1d975bd6-587e-4f92-8566-f881862b55af/toggle?access_token=693cb233-759e-4fd6-9cfd-7157a0e5493e", false);
+xhr.send();
+
+console.log(xhr.status);
+console.log(xhr.statusText);
+	
+}
+</script> 
+
+<script>
+function checkConnection() {
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.CELL]     = 'Cell generic connection';
+    states[Connection.NONE]     = 'No network connection';
+
+    alert('Connection type: ' + states[networkState]);
+}
+
+checkConnection();
+</script>
+
+<button onclick="checkConnection()">net</button>
+<script>
+// onSuccess Callback
+// This method accepts a Position object, which contains the
+// current GPS coordinates
+//
+var onSuccess = function(position) {
+    alert('Latitude: '          + position.coords.latitude          + '\n' +
+          'Longitude: '         + position.coords.longitude         + '\n' +
+          'Altitude: '          + position.coords.altitude          + '\n' +
+          'Accuracy: '          + position.coords.accuracy          + '\n' +
+          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+          'Heading: '           + position.coords.heading           + '\n' +
+          'Speed: '             + position.coords.speed             + '\n' +
+          'Timestamp: '         + position.timestamp                + '\n');
+};
+
+// onError Callback receives a PositionError object
+//
+function onError(error) {
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
+}
+
+navigator.geolocation.getCurrentPosition(onSuccess, onError);
+</script>
+
+
+<!-- vibrate function -->
+<script>
+function vibrate() {
+navigator.vibrate(1000);
+}
+</script>
+<button onclick="vibrate()">vibrate</button>
+
+
+<!-- for possible future use https://www.npmjs.com/package/passport-smartthings
+<script>
+var SmartThingsStrategy = require('passport-smartthings').Strategy
+
+passport.use(new SmartThingsStrategy({
+    clientID: '0e587288-bd88-43a6-83cf-9177a501ed5b',
+    clientSecret: '8cd837cd-a736-4b9f-a395-d326455c611a'
+}));
+</script>
+-->
+<a rel="nofollow" href="http://184.7.223.152:80/" target="new"><img
+ id="image0"
+ src="http://184.7.223.152:80/mjpg/video.mjpg?COUNTER"
+ class="img-responsive img-rounded detailimage"
+ alt="" height="122" width="122"
+ title="Click here to enter the camera located in United States, region Louisiana, Monroe" /></a>
+ 
+<script>
+var ch = 0;
+var imageurls = new Array();
+imageurls[0] = new String("http://184.7.223.152:80/mjpg/video.mjpg?COUNTER");
+</script>
+
+<!--
+   <script>
+   var your_order_id = 5;
+   alert(your_order_id);
+    $.ajax({
+	data: 'orderid=' + your_order_id,
+    url:"http://smartapartment.spartan-net.com/auth/index2.php",
+    method: 'POST',
+	success: function(msg) {
+	alert(msg);
+	}
+	});
+    </script>
+ 
+
+<script type="text/javascript" src="ip.php"></script>
+ -->
+
+<form method="post" id="infoForm">
+    <input type="text" name="first_name" id="first_name" value="" placeholder="First Name"  />
+    <input type="text" name="last_name" id="last_name" value="" placeholder="Last Name"  />   
+    <input type="text" name="email" id="email" value="" placeholder="Email"  />
+    <button type="submit">Submit</button> 
+</form>
+
+<script>
+$('#infoForm').submit(function() {
+
+    var postTo = 'http://smartapartment.spartan-net.com/auth/index2.php';
+
+    $.post(postTo,({first_name: $('[name=first_name]').val(), last_name: $('[name=last_name]').val(), email: $('[name=email]').val()}),
+    function(data) {
+        alert(data);
+        if(data != "") {
+            // do something
+        } else {
+            // couldn't connect
+        }
+        },'json');
+    return false;
+
+});
+</script>
+
+
+
+
+
+</html>
+        </p>   
+    </div> 
+	
+
+    <script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/plugins/Flashlight.js"></script> 
+    <script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/light.js"></script>
+    <script type="text/javascript">
+
+        app.initialize();
+		
+    </script>
+
+
+	
+	
+</body>
+
+</html>

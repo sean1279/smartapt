@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="aerogear-cordova-oauth2" version="1.0.5">
+
+  <name>OAuth2</name>
+  <keywords>cordova,aerogear,oath2,google,keycloak,facebook</keywords>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0" />
+    <engine name="cordova-android" version=">=4.0.0" />
+  </engines>
+
+  <asset src="www/oauth2.js" target="js/oauth2.js" />
+
+  <js-module src="www/oauth2.js" name="oauth2">
+    <clobbers target="oauth2" />
+  </js-module>
+
+  <dependency id="es6-promise-plugin" url="https://github.com/vstirbu/PromisesPlugin.git"/>
+
+  <platform name="android">
+    <dependency id="org.jboss.aerogear.cordova.android.reflect" url="https://github.com/edewit/aerogear-reflect-cordova.git"/>
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="OAuth2Plugin">
+        <param name="android-package" value="org.jboss.aerogear.cordova.oauth2.OAuth2Plugin"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <service android:name="org.jboss.aerogear.android.authorization.oauth2.OAuth2AuthzService"/>
+    </config-file>
+    <source-file src="src/android/OAuth2Plugin.java" target-dir="src/org/jboss/aerogear/cordova/oauth2/"/>
+    <source-file src="src/android/OauthGoogleServicesIntentHelper.java" target-dir="src/org/jboss/aerogear/cordova/oauth2/"/>
+    <framework src="src/android/dependencies.gradle" type="gradleReference" custom="true"/>
+  </platform>
+
+  <platform name="ios">
+    <info>
+      use `cordova build ios --device` to build
+    </info>
+    <config-file target="config.xml" parent="/*">
+      <feature name="OAuth2Plugin">
+        <param name="ios-package" value="OAuth2Plugin" />
+      </feature>
+    </config-file>
+    <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+      <array>
+        <dict>
+          <key>CFBundleURLSchemes</key>
+          <array>
+            <string>$PACKAGE_NAME</string>
+          </array>
+        </dict>
+        <dict>
+          <key>CFBundleURLName</key>
+          <string>fbYYY</string>
+          <key>CFBundleURLSchemes</key>
+          <array>
+            <string>fb$PACKAGE_NAME</string>
+          </array>
+        </dict>
+      </array>
+    </config-file>
+    <hook type="after_plugin_install" src="hooks/addSwiftOptions.js" />
+
+    <source-file src="src/ios/http-0.4.1/AuthzModule.swift" />
+    <source-file src="src/ios/http-0.4.1/Http.swift" />
+    <source-file src="src/ios/http-0.4.1/HttpRequestSerializer.swift" />
+    <source-file src="src/ios/http-0.4.1/JsonRequestSerializer.swift" />
+    <source-file src="src/ios/http-0.4.1/JsonResponseSerializer.swift" />
+    <source-file src="src/ios/http-0.4.1/MultiPartData.swift" />
+    <source-file src="src/ios/http-0.4.1/RequestSerializer.swift" />
+    <source-file src="src/ios/http-0.4.1/ResponseSerializer.swift" />
+    <source-file src="src/ios/http-0.4.1/StringResponseSerializer.swift" />
+    <source-file src="src/ios/http-0.4.1/Utils.swift" />
+
+    <source-file src="src/ios/oauth-0.4.0/AccountManager.swift" />
+    <source-file src="src/ios/oauth-0.4.0/Config.swift" />
+    <source-file src="src/ios/oauth-0.4.0/DateUtils.swift" />
+    <source-file src="src/ios/oauth-0.4.0/FacebookOAuth2Module.swift" />
+    <source-file src="src/ios/oauth-0.4.0/KeycloakOAuth2Module.swift" />
+    <source-file src="src/ios/oauth-0.4.0/OAuth2Module.swift" />
+    <source-file src="src/ios/oauth-0.4.0/OAuth2Session.swift" />
+    <source-file src="src/ios/oauth-0.4.0/OAuth2WebViewController.swift" />
+    <source-file src="src/ios/oauth-0.4.0/OpenIDClaim.swift" />
+    <source-file src="src/ios/oauth-0.4.0/TrustedPersistantOAuth2Session.swift" />
+    <source-file src="src/ios/oauth-0.4.0/UntrustedMemoryOAuth2Session.swift" />
+
+    <source-file src="src/ios/Bridging-Header.h" />
+    <source-file src="src/ios/OAuth2Plugin.swift" />
+    <source-file src="src/ios/AppDelegate+url.m" />
+    <source-file src="src/ios/AppDelegate+url.h" />
+  </platform>
+  <platform name="wp8">
+    <info>
+      open platforms/wp8/App.xaml.cs add the following on line 140:
+      RootFrame.UriMapper = new OAuthUriMapper();
+    </info>
+    <config-file target="config.xml" parent="/*">
+      <feature name="OAuth2Plugin">
+        <param name="wp-package" value="OAuth2Plugin"/>
+      </feature>
+    </config-file>
+    <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App" after="Tokens">
+        <Extensions>
+          <Protocol Name="$PACKAGE_NAME" NavUriFragment="encodedLaunchUri=%s" TaskID="_default"/>
+      </Extensions>
+    </config-file>
+    <source-file src="src/wp8/OAuth2Plugin.cs"/>
+    <source-file src="src/wp8/OAuthUriMapper.cs"/>
+    <source-file src="src/wp8/P.xaml"/>
+    <source-file src="src/wp8/P.xaml.cs"/>
+
+    <source-file src="src/wp8/AccountManager.cs"/>
+    <source-file src="src/wp8/AuthzModule.cs"/>
+    <source-file src="src/wp8/AuthzWebRequest.cs"/>
+    <source-file src="src/wp8/Config.cs"/>
+    <source-file src="src/wp8/FacebookOAuth2Module.cs"/>
+    <source-file src="src/wp8/KeycloakOAuth2Module.cs"/>
+    <source-file src="src/wp8/ManifestInfo.cs"/>
+    <source-file src="src/wp8/OAuth2Module.cs"/>
+    <source-file src="src/wp8/OAuth2Session.cs"/>
+    <source-file src="src/wp8/TrustedSessionRepository.cs"/>
+  </platform>
+</plugin>
